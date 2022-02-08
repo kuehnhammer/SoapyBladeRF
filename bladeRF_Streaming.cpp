@@ -133,7 +133,9 @@ SoapySDR::Stream *bladeRF_SoapySDR::setupStream(
     int ret = bladerf_sync_config(
         _dev,
         layout,
-        BLADERF_FORMAT_SC16_Q11_META,
+        BLADERF_FORMAT_SC16_Q11,
+        //BLADERF_FORMAT_SC16_Q11_META,
+        //BLADERF_FORMAT_PACKET_META,
         numBuffs,
         bufSize,
         numXfers,
